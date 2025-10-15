@@ -15,7 +15,8 @@
 #define LY_FUNC 4
 #define LY_SPECIAL 5
 #define LY_SUPPORT 6
-#define LY_BT 7
+#define LY_RIGHT_TAB 7
+#define LY_BT 8
 
 &kscan {
     debounce-press-ms = <10>;
@@ -140,10 +141,20 @@
         support_layer {
             label = "LY_SUPPORT";
             bindings = <
-                &kp RC(NUMBER_6)  ___  ___  ___  &kp LG(TAB)    ___           ___  ___            ___  ___  ___  ___
-                ___               ___  ___  ___  &kp LG(SPACE)  ___           ___  &kp LC(GRAVE)  ___  ___  ___  ___
-                ___               ___  ___  ___  ___            ___           ___  ___            ___  ___  ___  ___
-                ___               ___  ___  ___  ___            ___           ___  ___            ___  ___  ___  ___
+                &kp RC(NUMBER_6)  &kp LG(KP_EQUAL)  &kp LG(KP_MINUS)  &kp LG(NUMBER_0)  &kp LG(TAB)    ___           ___  ___            ___  ___  ___  ___
+                ___               ___               ___               ___               &kp LG(SPACE)  ___           ___  &kp LC(GRAVE)  ___  ___  ___  ___
+                ___               ___               ___               ___               ___            ___           ___  ___            ___  ___  ___  ___
+                ___               ___               ___               ___               ___            ___           ___  ___            ___  ___  ___  ___
+            >;
+        };
+
+        right_tab_layer {
+            label = "LY_RIGHT_TAB";
+            bindings = <
+                ___  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  ___           ___  ___  ___  ___  ___  ___
+                ___  ___               ___               ___               ___               ___           ___  ___  ___  ___  ___  ___
+                ___  ___               ___               ___               ___               ___           ___  ___  ___  ___  ___  ___
+                ___  ___               ___               ___               ___               ___           ___  ___  ___  ___  ___  ___
             >;
         };
 
