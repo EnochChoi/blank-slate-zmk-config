@@ -62,7 +62,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             bindings = <&mo>, <&kp>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <150>;
         };
 
         mokp2: mo_to_kp2 {
